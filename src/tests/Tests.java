@@ -5,8 +5,6 @@ import logic.InterestValues;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.text.DecimalFormat;
-
 /**
  * Created by william.eyre on 21/03/2017.
  *
@@ -14,7 +12,6 @@ import java.text.DecimalFormat;
 
 public class Tests {
 
-    DecimalFormat df2 = new DecimalFormat(".##");
 
     @Test
     public void testAFullRunOfTheCode() {
@@ -29,5 +26,21 @@ public class Tests {
         Assert.assertEquals(new Double(test1.getTotal()), new Double(1100.0));
         Assert.assertEquals(new Double(test1.getMonthlyInterest()), new Double(8.333333333333334));
     }
+
+    @Test
+    public void testSecondFullRun() {
+
+        Calculations fullRun = new Calculations();
+
+        InterestValues values = new InterestValues(5000, 25, 24);
+
+        InterestValues test2 = fullRun.interestCalculations(values);
+
+        Assert.assertEquals(new Double(test2.getTotalInterest()), new Double(2500.0));
+        Assert.assertEquals(new Double(test2.getTotal()), new Double(7500.0));
+        Assert.assertEquals(new Double(test2.getMonthlyInterest()), new Double(104.16666666666667));
+    }
+
+
 
 }
