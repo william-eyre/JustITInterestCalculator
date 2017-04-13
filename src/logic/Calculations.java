@@ -2,6 +2,7 @@ package logic;
 
 /**
  * Created by william.eyre on 21/03/2017.
+ *
  */
 public class Calculations {
 
@@ -21,4 +22,5 @@ public class Calculations {
 
         return values;
     }
+
 }
