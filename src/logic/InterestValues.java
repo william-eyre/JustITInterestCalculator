@@ -20,7 +20,7 @@ public class InterestValues {
     /* constructor for inputs */
     public InterestValues(double amountBorrowed, double interestRate, double timeBorrowed) {
         this.amountBorrowed = amountBorrowed;
-        this.interestRate = interestRate;
+        this.interestRate = interestRate/100;
         this.timeBorrowed = timeBorrowed;
     }
 
@@ -28,12 +28,24 @@ public class InterestValues {
         return amountBorrowed;
     }
 
+    public void setAmountBorrowed(double amountBorrowed) {
+        this.amountBorrowed = amountBorrowed;
+    }
+
     public double getInterestRate() {
         return interestRate;
     }
 
+    public void setInterestRate(double interestRate) {
+        this.interestRate = interestRate;
+    }
+
     public double getTimeBorrowed() {
         return timeBorrowed;
+    }
+
+    public void setTimeBorrowed(double timeBorrowed) {
+        this.timeBorrowed = timeBorrowed;
     }
 
     public double getTotalInterest() {
